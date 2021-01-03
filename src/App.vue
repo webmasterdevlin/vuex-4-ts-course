@@ -1,30 +1,36 @@
-<template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+<template #default>
+  <div>
+    <HeaderNav></HeaderNav>
+    <div class="container">
+      <div class="vertical-center">
+        <div>
+          <router-view></router-view>
+        </div>
+      </div>
+    </div>
   </div>
-  <router-view />
 </template>
 
+<script lang="ts">
+import HeaderNav from "@/components/Navbar.vue";
+export default {
+  name: "App",
+  components: {
+    HeaderNav,
+  },
+};
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+/* @import "../node_modules/bootstrap-icons"; */
 
-#nav {
-  padding: 30px;
+h1,
+h2,
+h3 {
+  margin-bottom: 2rem;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+input {
+  margin-bottom: 2rem;
 }
 </style>

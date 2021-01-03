@@ -1,0 +1,6 @@
+export const LOADING_ANTI_HERO = "LOADING_ANTI_HERO";
+
+export const GET_ANTI_HEROES = "GET_ANTI_HEROES";
+export const REMOVE_ANTI_HERO = "REMOVE_ANTI_HERO";
+export const ADD_ANTI_HERO = "ADD_ANTI_HERO";
+export const UPDATE_ANTI_HERO = "UPDATE_ANTI_HERO";

@@ -1,8 +1,11 @@
-import { createStore } from "vuex";
+import { createStore, createLogger } from "vuex";
+import heroModule from "./hero";
+import antiHeroModule from "./anti-hero";
 
-export default createStore({
-  state: {},
-  mutations: {},
-  actions: {},
-  modules: {}
+export const store = createStore({
+  modules: {
+    heroModule,
+    antiHeroModule,
+  },
+  plugins: [createLogger()],
 });
