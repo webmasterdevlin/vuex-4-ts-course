@@ -73,9 +73,17 @@
 <script lang="ts">
 import { Field, Form as VeeForm, ErrorMessage } from "vee-validate";
 import { yupValidation } from "@/helpers/yupValidation";
-import { defineComponent } from "vue";
+import { defineComponent, PropType } from "vue";
 
-export default defineComponent( {
+type Props = {
+  id: string;
+  firstName: string;
+  lastName: string;
+  house: string;
+  knownAs: string;
+};
+
+export default defineComponent({
   name: "Form",
   components: {
     VeeForm,
@@ -86,11 +94,11 @@ export default defineComponent( {
   props: {
     text: {
       type: String,
-      default: () => String,
+      required: true,
     },
     obj: {
-      type: Object,
-      default: () => {},
+      type: Object as PropType<Props>,
+      required: true,
     },
   },
 

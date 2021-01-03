@@ -92,6 +92,7 @@
 import { mapGetters, mapActions } from "vuex";
 import { defineComponent, ref } from "vue";
 import Form from "@/components/Form.vue";
+import { AntiHeroModel } from "@/models/antiHeroModel";
 
 export default defineComponent( {
   name: "AntiHeroes",
@@ -114,7 +115,7 @@ export default defineComponent( {
 
   // Vue 3
   setup() {
-    const antiHeroForm = ref({
+    const antiHeroForm = ref<AntiHeroModel>({
       id: "",
       firstName: "",
       lastName: "",
