@@ -2,7 +2,6 @@ module.exports = {
   root: true,
   env: {
     node: true,
-    "jest/globals": true,
   },
   plugins: ["testing-library", "jest-dom"],
   extends: [
@@ -25,4 +24,15 @@ module.exports = {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
   },
+  overrides: [
+    {
+      files: [
+        "**/__tests__/*.{j,t}s?(x)",
+        "**/tests/unit/**/*.spec.{j,t}s?(x)",
+      ],
+      env: {
+        jest: true,
+      },
+    },
+  ],
 };
