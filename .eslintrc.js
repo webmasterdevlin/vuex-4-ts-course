@@ -2,6 +2,7 @@ module.exports = {
   root: true,
   env: {
     node: true,
+    "jest/globals": true,
   },
   plugins: ["testing-library", "jest-dom"],
   extends: [
@@ -9,6 +10,8 @@ module.exports = {
     "plugin:testing-library/vue",
     "plugin:jest-dom/recommended",
     "plugin:vue/vue3-essential",
+    'plugin:vue/recommended',
+    'plugin:testing-library/vue',
     "eslint:recommended",
     "@vue/typescript/recommended",
     "@vue/prettier",
