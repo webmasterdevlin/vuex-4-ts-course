@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid mb-5">
-    <h1>Anti-Heroes Page</h1>
+    <h1 class="heading">Anti-Heroes Page</h1>
     <div
       v-if="editingTracker === '0'"
       class="d-flex flex-row justify-content-start"
@@ -159,4 +159,8 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.heading {
+  color: blue;
+}
+</style>
