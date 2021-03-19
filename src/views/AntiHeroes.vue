@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid mb-5">
-    <h1>AntiHeroes Works!</h1>
+    <h1>Anti-Heroes Page</h1>
     <div
       v-if="editingTracker === '0'"
       class="d-flex flex-row justify-content-start"
@@ -94,7 +94,7 @@ import { defineComponent, ref } from "vue";
 import Form from "@/components/Form.vue";
 import { AntiHeroModel } from "@/models/antiHeroModel";
 
-export default defineComponent( {
+export default defineComponent({
   name: "AntiHeroes",
   components: { Form },
 
