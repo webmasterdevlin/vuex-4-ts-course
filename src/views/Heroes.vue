@@ -152,6 +152,7 @@ export default defineComponent({
   },
 
   mounted() {
+    console.log("MOUNTED");
     this.getHeroesAction();
   },
 });

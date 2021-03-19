@@ -2,6 +2,7 @@ import { api, Endpoints } from "@/api/axios-config";
 import { HeroModel } from "@/models/heroModel";
 
 export async function getHeroesAxios() {
+  console.log("GET_HEROES_AXIOS:");
   return await api.get<HeroModel[]>(Endpoints.heroes);
 }
 
