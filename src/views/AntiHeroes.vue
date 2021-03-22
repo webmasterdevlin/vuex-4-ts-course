@@ -62,6 +62,7 @@
           <section class="card-body">
             <div>
               <button
+                data-testid="cancel-button"
                 v-if="editingTracker === antiHero.id"
                 @click="() => (editingTracker = '0')"
                 class="btn btn-info card-link col text-center"
@@ -69,6 +70,7 @@
                 Cancel
               </button>
               <button
+                data-testid="edit-button"
                 v-else
                 @click="() => (editingTracker = antiHero.id)"
                 class="btn btn-primary card-link col text-center"
@@ -76,6 +78,7 @@
                 Edit
               </button>
               <button
+                data-testid="delete-button"
                 @click="removeAntiHeroAction(antiHero.id)"
                 class="btn btn-outline-danger card-link col text-center"
               >
