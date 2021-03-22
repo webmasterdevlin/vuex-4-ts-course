@@ -28,6 +28,7 @@
       <!-- reusable, can be separated to its own file -->
       <div v-if="heroes.length > 0">
         <div
+          data-testid="card"
           class="card mt-3"
           style="width: auto"
           v-for="hero in heroes"
@@ -151,9 +152,9 @@ export default defineComponent({
     */
   },
 
-  mounted() {
+  async mounted() {
     console.log("MOUNTED");
-    this.getHeroesAction();
+    await this.getHeroesAction();
   },
 });
 </script>

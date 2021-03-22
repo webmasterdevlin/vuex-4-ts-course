@@ -11,6 +11,7 @@
         <ErrorMessage name="firstName" class="text-danger" />
         <Field
           id="firstName"
+          data-testid="firstName"
           v-model="obj.firstName"
           placeholder="📛"
           autocomplete="off"
@@ -26,6 +27,7 @@
         <ErrorMessage name="lastName" class="text-danger" />
         <Field
           id="lastName"
+          data-testid="lastName"
           v-model="obj.lastName"
           placeholder="📛"
           autocomplete="off"
@@ -40,6 +42,7 @@
         <ErrorMessage name="house" class="text-danger" />
         <Field
           id="house"
+          data-testid="house"
           v-model="obj.house"
           placeholder="🏠"
           autocomplete="off"
@@ -54,6 +57,7 @@
         <ErrorMessage name="knownAs" class="text-danger" />
         <Field
           id="knownAs"
+          data-testid="knownAs"
           v-model="obj.knownAs"
           placeholder="👀"
           autocomplete="off"
@@ -63,7 +67,11 @@
           class="form-control"
         />
       </section>
-      <button type="submit" class="btn btn-success">
+      <button
+        data-testid="save-character"
+        type="submit"
+        class="btn btn-success"
+      >
         {{ text }}
       </button>
     </VeeForm>

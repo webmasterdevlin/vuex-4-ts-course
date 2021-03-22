@@ -31,3 +31,8 @@
 - update components with mapGetters and mapActions
 - npm i concurrently json-server
 - copy-paste db.json
+
+
+### Cypress' best practices in writing tests
+
+https://docs.cypress.io/guides/references/best-practices.html

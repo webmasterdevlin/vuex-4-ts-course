@@ -1,0 +1,14 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "strict": false,
+    "noImplicitAny": false,
+    "types":["cypress", "@testing-library/cypress","@percy/cypress"],
+    "isolatedModules": false,
+    "allowJs": true
+  },
+  "include": [
+    "./**/*.ts"
+  ],
+  "exclude": []
+}

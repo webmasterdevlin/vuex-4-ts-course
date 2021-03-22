@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid mb-5">
-    <h1 class="heading">Anti-Heroes Page</h1>
+    <h1>Anti-Heroes Page</h1>
     <div
       v-if="editingTracker === '0'"
       class="d-flex flex-row justify-content-start"
@@ -28,6 +28,7 @@
       <!-- reusable, can be separated to its own file -->
       <div v-if="antiHeroes.length > 0">
         <div
+          data-testid="card"
           class="card mt-3"
           style="width: auto"
           v-for="antiHero in antiHeroes"
@@ -153,14 +154,10 @@ export default defineComponent({
     */
   },
 
-  mounted() {
-    this.getAntiHeroesAction();
+  async mounted() {
+    await this.getAntiHeroesAction();
   },
 });
 </script>
 
-<style scoped>
-.heading {
-  color: blue;
-}
-</style>
+<style scoped></style>
